@@ -1,0 +1,27 @@
+PROBLEM: I/P- arr[]={1, 1, 1, 0}
+         O/P- 1
+         
+         Explain: 1^1=0
+                  0^1=1
+                  1^0=1 (and this '1' is answer)
+                  
+                  1  1  1  0
+                  \^/  /  /
+                   0  /  /
+                   \^/  /
+                    1  /
+                    \^/
+                     1  ---> This is answer
+                     
+                     
+
+
+SOLUTION:
+
+    int xorGate(vector<int> arr,int N){
+        int c= (arr[0]^arr[1]);
+        for(int i=2;i<N;i++){
+            c=(c^arr[i]);
+        }
+        return c;
+    }
